@@ -1,0 +1,48 @@
+kind: knowledge-explainer-account
+id: knowledge-demo
+markText: 学
+displayName: 开源知识讲解
+positioningTags:
+  - id: clear-concept
+    topLine: 讲清概念
+    bottomLine: 看见结构
+  - id: practical-step
+    topLine: 拆成步骤
+    bottomLine: 立即实践
+  - id: reliable-source
+    topLine: 标注依据
+    bottomLine: 保留边界
+series:
+  - id: learning-path
+    displayName: 学习路径
+    creationMethodId: knowledge-explainer
+    templateId: illustrated-caption
+    themeId: illustrated-caption-editorial
+    defaultViewId: portrait-3x4
+    signatureLine: KNOWLEDGE EXPLAINER
+    disclaimer: |-
+      示例内容
+      请核验来源
+    footerTagIds:
+      - clear-concept
+      - practical-step
+      - reliable-source
+    illustrationSystem:
+      id: knowledge-ink-linework-v1
+      stylePrompt: 现代知识出版物风格线稿插图，使用清晰黑色墨线、克制朱红点缀和充足留白。
+      canvas:
+        preferredAspectRatio: 1.6
+        transparentBackground: true
+      defaultNegativeRules:
+        - 不出现文字、字幕、品牌标志或账号标识
+        - 不使用写实摄影、渐变或三维渲染
+        - 不使用复杂背景或装饰性边框
+    narration:
+      voiceByLanguage:
+        zh: macos-reed-zh
+      synthesis:
+        emotion: calm
+        speed: 1
+        volume: 1
+    backgroundId: knowledge-warm-paper
+    backgroundMusicId: none

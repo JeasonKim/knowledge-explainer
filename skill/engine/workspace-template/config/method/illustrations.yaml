@@ -1,0 +1,15 @@
+kind: knowledge-explainer-illustration-catalog
+entries:
+  - id: learning-path
+    assetPath: method/illustrations/learning-path.png
+    systemId: knowledge-ink-linework-v1
+    subject: 一名学习者沿着三个清晰节点走向目标
+    visualMetaphor: 把复杂学习目标拆成可执行路径
+    composition: wide
+    applicationScenarios:
+      - 学习方法与知识结构讲解
+    tags:
+      - 学习
+      - 路径
+      - 方法
+    status: approved

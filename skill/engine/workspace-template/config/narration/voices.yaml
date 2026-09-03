@@ -1,0 +1,15 @@
+kind: tts-voice-catalog
+voices:
+  - id: macos-reed-zh
+    provider: macos-say
+    displayName: Reed 本地中文男声
+    providerVoiceId: Reed (Chinese (China mainland))
+    gender: male
+    language: zh
+    useCases:
+      - 知识讲解
+      - 本地验收
+    description: macOS 内置中文语音，无需云端凭据。
+    tags:
+      - local
+      - offline

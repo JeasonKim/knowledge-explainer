@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: skill/engine/pnpm-lock.yaml
+      - name: 安装锁定依赖
+        run: pnpm --dir skill/engine install --frozen-lockfile
+      - name: 校验 Shell 入口
+        run: bash -n skill/scripts/run-project.sh skill/scripts/prepare-local-asr.sh
+      - name: 类型检查与测试
+        run: pnpm --dir skill/engine check
+      - name: 构建模板调试器
+        run: pnpm --dir skill/engine --filter @knowledge-explainer/template-designer exec vite build
+      - name: 校验生成产物
+        run: |
+          pnpm --dir skill/engine generate:contracts
+          pnpm --dir skill/engine generate:studio-preview
+          git diff --exit-code -- skill/references/creation-plan.schema.json skill/engine/packages/renderer/src/studio-preview.json

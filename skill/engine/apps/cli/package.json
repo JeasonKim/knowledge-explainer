@@ -1,0 +1,13 @@
+{
+  "name": "@knowledge-explainer/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@knowledge-explainer/contracts": "workspace:*",
+    "@knowledge-explainer/core": "workspace:*",
+    "@knowledge-explainer/narration": "workspace:*",
+    "@knowledge-explainer/tts": "workspace:*",
+    "yaml": "^2.9.0"
+  }
+}

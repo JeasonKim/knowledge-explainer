@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge-explainer/creation-plan",
+  "title": "knowledge-explainer creation plan",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "const": "knowledge-explainer-plan"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creationMethodId": {
+      "type": "string",
+      "const": "knowledge-explainer"
+    },
+    "templateId": {
+      "type": "string",
+      "const": "illustrated-caption"
+    },
+    "episode": {
+      "type": "object",
+      "properties": {
+        "accountId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "seriesId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "zh",
+            "en"
+          ]
+        }
+      },
+      "required": [
+        "accountId",
+        "seriesId",
+        "title",
+        "language"
+      ],
+      "additionalProperties": false
+    },
+    "presentation": {
+      "type": "object",
+      "properties": {
+        "background": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "inherit-series"
+                }
+              },
+              "required": [
+                "mode"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "override"
+                },
+                "mediaId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                }
+              },
+              "required": [
+                "mode",
+                "mediaId"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "backgroundMusic": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "inherit-series"
+                }
+              },
+              "required": [
+                "mode"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "override"
+                },
+                "mediaId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                }
+              },
+              "required": [
+                "mode",
+                "mediaId"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "background",
+        "backgroundMusic"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "properties": {
+        "voice": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "inherit-series"
+                }
+              },
+              "required": [
+                "mode"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "override"
+                },
+                "voiceProfileId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                }
+              },
+              "required": [
+                "mode",
+                "voiceProfileId"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "script": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12000
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "script"
+      ],
+      "additionalProperties": false
+    },
+    "cards": {
+      "minItems": 1,
+      "maxItems": 120,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "hook",
+              "claim",
+              "contrast",
+              "example",
+              "framework",
+              "takeaway",
+              "end-card"
+            ]
+          },
+          "spokenText": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "illustrationAssetId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "illustrationCueId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "spokenText",
+          "caption",
+          "illustrationAssetId",
+          "illustrationCueId"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "kind",
+    "id",
+    "creationMethodId",
+    "templateId",
+    "episode",
+    "narration",
+    "cards"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,188 @@
+{
+  "kind": "knowledge-explainer-production",
+  "id": "learning-path-preview-portrait-3x4",
+  "creationMethodId": "knowledge-explainer",
+  "templateId": "illustrated-caption",
+  "title": "把目标变成一条路",
+  "episodeId": "learning-path-preview",
+  "knowledgeExplainer": {
+    "accountId": "knowledge-demo",
+    "accountMarkText": "学",
+    "accountName": "开源知识讲解",
+    "seriesId": "learning-path",
+    "seriesName": "学习路径",
+    "episodeTitle": "把目标变成一条路",
+    "signatureLine": "KNOWLEDGE EXPLAINER",
+    "disclaimer": "示例内容\n请核验来源",
+    "footerColumns": [
+      {
+        "topLine": "讲清概念",
+        "bottomLine": "看见结构"
+      },
+      {
+        "topLine": "拆成步骤",
+        "bottomLine": "立即实践"
+      },
+      {
+        "topLine": "标注依据",
+        "bottomLine": "保留边界"
+      }
+    ],
+    "illustrationSystem": {
+      "id": "knowledge-ink-linework-v1",
+      "stylePrompt": "现代知识出版物风格线稿插图。",
+      "canvas": {
+        "preferredAspectRatio": 1.6,
+        "transparentBackground": true
+      },
+      "defaultNegativeRules": [
+        "不出现文字、品牌或水印"
+      ]
+    },
+    "narration": {
+      "language": "zh",
+      "voiceProfileId": "macos-reed-zh",
+      "synthesis": {
+        "emotion": "calm",
+        "speed": 1,
+        "volume": 1
+      }
+    },
+    "background": {
+      "id": "knowledge-warm-paper",
+      "displayName": "暖白纸",
+      "kind": "paper",
+      "color": "#FCFAF6",
+      "paperTextureOpacity": 0.03,
+      "description": "轻暖纸张背景"
+    },
+    "backgroundMusic": {
+      "id": "none",
+      "displayName": "无背景音乐",
+      "status": "active",
+      "loop": false,
+      "volume": 0,
+      "description": "仅保留口播",
+      "licenseNote": "不需要音乐授权"
+    }
+  },
+  "themeId": "illustrated-caption-editorial",
+  "seed": 103182572,
+  "view": {
+    "id": "portrait-3x4",
+    "creationMethodId": "knowledge-explainer",
+    "format": {
+      "width": 1080,
+      "height": 1440,
+      "fps": 24
+    },
+    "safeArea": {
+      "top": 56,
+      "right": 48,
+      "bottom": 128,
+      "left": 48
+    }
+  },
+  "format": {
+    "width": 1080,
+    "height": 1440,
+    "fps": 24
+  },
+  "durationSeconds": 8,
+  "durationInFrames": 186,
+  "framing": {
+    "introDurationInFrames": 12,
+    "outroDurationInFrames": 30,
+    "cover": {
+      "eyebrow": "学习路径",
+      "primaryTitle": "把目标变",
+      "emphasisTitle": "成一条路",
+      "illustration": {
+        "assetId": "learning-path",
+        "assetPath": "method/illustrations/learning-path.png",
+        "systemId": "knowledge-ink-linework-v1",
+        "composition": "wide"
+      }
+    },
+    "closing": {
+      "eyebrow": "学习路径",
+      "primaryTitle": "把目标变",
+      "emphasisTitle": "成一条路",
+      "illustration": {
+        "assetId": "learning-path",
+        "assetPath": "method/illustrations/learning-path.png",
+        "systemId": "knowledge-ink-linework-v1",
+        "composition": "wide"
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "map",
+      "role": "hook",
+      "layoutId": "illustrated-caption-editorial/knowledge-explainer/portrait-3x4/caption-card",
+      "layoutRenderer": "knowledge-explainer-caption",
+      "startFrame": 12,
+      "endFrame": 84,
+      "eyebrow": "学习路径",
+      "headline": "先看见知识地图",
+      "illustration": {
+        "assetId": "learning-path",
+        "assetPath": "method/illustrations/learning-path.png",
+        "systemId": "knowledge-ink-linework-v1",
+        "composition": "wide"
+      },
+      "illustrationCueId": "learning-path"
+    },
+    {
+      "id": "steps",
+      "role": "takeaway",
+      "layoutId": "illustrated-caption-editorial/knowledge-explainer/portrait-3x4/caption-card",
+      "layoutRenderer": "knowledge-explainer-caption",
+      "startFrame": 84,
+      "endFrame": 156,
+      "eyebrow": "学习路径",
+      "headline": "再沿着清晰步骤\n抵达目标",
+      "illustration": {
+        "assetId": "learning-path",
+        "assetPath": "method/illustrations/learning-path.png",
+        "systemId": "knowledge-ink-linework-v1",
+        "composition": "wide"
+      },
+      "illustrationCueId": "learning-path"
+    }
+  ],
+  "illustrationCues": [
+    {
+      "id": "learning-path",
+      "startFrame": 12,
+      "endFrame": 156,
+      "illustration": {
+        "assetId": "learning-path",
+        "assetPath": "method/illustrations/learning-path.png",
+        "systemId": "knowledge-ink-linework-v1",
+        "composition": "wide"
+      }
+    }
+  ],
+  "narration": {
+    "audioPath": "studio/silence.mp3",
+    "timingSource": "measured",
+    "segments": [
+      {
+        "id": "map",
+        "text": "先看见知识地图，",
+        "caption": "先看见知识地图",
+        "startFrame": 12,
+        "endFrame": 84
+      },
+      {
+        "id": "steps",
+        "text": "再沿着清晰步骤抵达目标。",
+        "caption": "再沿着清晰步骤\n抵达目标",
+        "startFrame": 84,
+        "endFrame": 156
+      }
+    ]
+  }
+}

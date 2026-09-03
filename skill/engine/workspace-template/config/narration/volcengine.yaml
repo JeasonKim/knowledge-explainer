@@ -1,0 +1,8 @@
+kind: volcengine-tts-config
+endpoint: https://openspeech.bytedance.com/api/v3/tts/unidirectional
+resourceId: seed-icl-2.0
+audio:
+  format: wav
+  sampleRate: 24000
+explicitLanguage: zh
+voiceInstruction: 适合高质量中文知识短视频口播。

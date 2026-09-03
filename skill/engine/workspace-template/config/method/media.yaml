@@ -1,0 +1,22 @@
+kind: knowledge-explainer-media-catalog
+backgrounds:
+  - id: knowledge-white-paper
+    displayName: 编辑白纸
+    kind: paper
+    color: "#FFFFFF"
+    paperTextureOpacity: 0.025
+    description: 高对比的知识出版物白纸背景。
+  - id: knowledge-warm-paper
+    displayName: 暖白纸
+    kind: paper
+    color: "#FCFAF6"
+    paperTextureOpacity: 0.03
+    description: 适合叙事与学习主题的轻暖纸张背景。
+backgroundMusic:
+  - id: none
+    displayName: 无背景音乐
+    status: active
+    loop: false
+    volume: 0
+    description: 仅保留口播，避免示例工程携带授权不明确的音乐。
+    licenseNote: 不需要音乐授权。

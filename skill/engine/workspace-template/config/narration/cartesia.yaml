@@ -1,0 +1,6 @@
+kind: cartesia-config
+modelId: sonic-3.5-2026-05-04
+apiVersion: "2026-03-01"
+synthesis:
+  emotion: calm
+# 发音纠正由 config/narration/pronunciations.yaml 维护；CLI 会同步远程词典 ID 回写到该文件。
